@@ -10,11 +10,11 @@ class Producto extends Component {
   
     constructor(props) {
       super(props)
-      console.log("paso por constructor de PRODCTOS")
+      console.log("paso por constructor de PRODUCTOS")
     }
   
     componentDidMount() {
-      axios.get("https://obscure-coast-56975.herokuapp.com/productos")
+      axios.get("https://obscure-coast-56975.herokuapp.com/producto")
       .then(resultados => {
         const {data} = resultados
         this.setState({

@@ -3,12 +3,14 @@ import Cliente from './Cliente';
 import Producto from './Producto';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
+import './Header.css';
+
 const header = (props) => {
     return (
         <Router>
             <div className="App">
                 <div className="header">
-                    <div className="contenedor-rutas">
+                    <div className="wrapper-rutas">
                         <div className="ruta"><Link to={'/clientes'}>Lista Clientes</Link></div>
                         <div className="ruta"><Link to={'/productos'}>Lista Productos</Link></div>
 
