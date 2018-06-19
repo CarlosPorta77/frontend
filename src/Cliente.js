@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ClienteConstruido from './ClienteConstruido'
 import axios from 'axios'
-import './Cliente.css';
 
 class Cliente extends Component {
 
@@ -31,7 +30,7 @@ class Cliente extends Component {
 
     render() {
         return (
-            <div className="wrapper-cliente">
+            <div className="Cliente">
              {this.state.clientes.map((cliente) => {
                 return (
                  <ClienteConstruido
@@ -49,4 +48,4 @@ class Cliente extends Component {
 
 
 
-export default Cliente
+export default Cliente 
