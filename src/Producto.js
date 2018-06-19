@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ProductoConstruido from './ProductoConstruido'
 import axios from 'axios'
 
-import './Producto.css';
 class Producto extends Component {
 
     state = { 
@@ -11,7 +10,7 @@ class Producto extends Component {
   
     constructor(props) {
       super(props)
-      console.log("paso por constructor de PRODUCTOS")
+      console.log("paso por constructor de PRODCTOS")
     }
   
     componentDidMount() {
@@ -31,14 +30,15 @@ class Producto extends Component {
 
     render() {
         return (
-            <div className="wrapper-producto">
+            <div className="Producto">
              {this.state.productos.map((producto) => {
                 return (
                  <ProductoConstruido
                     key = {producto.id}
                      id = {producto.id}
                      nombre = {producto.nombre}
-                     cateogoria = {producto.categoria}
+                     categoria = {producto.categoriaId}
+                     stock = {producto.stock}
                  />
                 )
             })}
