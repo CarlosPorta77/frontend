@@ -1,0 +1,24 @@
+.wrapper-row{
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.item {
+    height: 30px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.item-1 {
+    height: 30px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}

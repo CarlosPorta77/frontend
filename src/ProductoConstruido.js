@@ -1,15 +1,13 @@
 import React from 'react'
 
+import './ProductoConstruido.css'
+
 const ProductoConstruido = (props) => {
     return(
-        <div>
-            <div>
-                <span>{props.nombre}</span>
-                <h5>Categoría:</h5>
-                <span>{props.categoria}</span>
-                <h5>Stock:</h5>
-                <span>{props.stock}</span>
-            </div>
+        <div className="wrapper-row">
+                <div className="item">{props.nombre}</div>
+                <div className="item-1">{props.categoria}</div>
+                <div className="item-1">{props.stock}</div>
         </div>	
 
     )
