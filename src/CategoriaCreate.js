@@ -1,40 +1,41 @@
+
 import React, {Component} from 'react';
 import axios from 'axios';
 
 
-class ProductoCreate extends Component {
+class CategoriaCreate extends Component {
 
   state = {
     error: null,
     errorUpdate: null,
-    nombreInput: '',
+    nombreCategoria: '',
     id: '',
-    productos: []
+    categorias: []
   };
 
   constructor(props){
     super(props);
 
-    axios.get('https://obscure-coast-56975.herokuapp.com/producto')
+    axios.get('https://obscure-coast-56975.herokuapp.com/categoria')
       .then(result => {
         const {data} = result;
         this.setState({
-          clientes: data
+          categorias: data
         });
       });
   }
 
-  getNombre = (event) => {
-    const nombreInput = event.target.value;
-    this.setState({nombreInput});
+  getNombreCategoria = (event) => {
+    const nombreCategoria= event.target.value;
+    this.setState({nombreCategoria});
   };
 
 
 
-  saveProducto = () => {
-    const {nombreInput} = this.state;
-    axios.post('https://obscure-coast-56975.herokuapp.com/producto', {
-      nombre: nombreInput
+  saveCategoria = () => {
+    const {nombreCategoria} = this.state;
+    axios.post('https://obscure-coast-56975.herokuapp.com/categoria', {
+      nombre: nombreCategoria
     }).then(response => {
       this.props.history.push("/");
     })
@@ -44,17 +45,16 @@ class ProductoCreate extends Component {
   };
 
 
-
   render() {
     const error = (<label>{this.state.error}</label>);
     const errorUpdate = (<label>{this.state.errorUpdate}</label>);
     return (
       <div className="Form">
-        <h2>Crear Un Producto Nuevo</h2>
+        <h2>Crear Una Categoría Nueva</h2>
         <br/>
-        <input placeholder="Nombre " onChange={this.getNombre} value={this.state.nombreInput} />
+        <input placeholder="Categoría " onChange={this.getNombreCategoria} value={this.state.nombreCategoria} />
         <br/>
-        <button onClick={this.saveProducto}>Guardar</button>
+        <button onClick={this.saveCategoria}>Guardar</button>
         {this.state.error ? error : ''}
         {this.state.errorUpdate ? errorUpdate : ''}
       </div>
@@ -62,4 +62,4 @@ class ProductoCreate extends Component {
   }
 }
 
-export default ProductoCreate;
+export default CategoriaCreate;
