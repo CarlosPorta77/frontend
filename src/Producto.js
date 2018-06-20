@@ -31,7 +31,7 @@ class Producto extends Component {
 
   render() {
     return (
-      <div className=".wrapper-producto">
+      <div className="wrapper-producto">
       <div className="wrapper-titulos">
         <h4>Nombre:</h4>
         <h4>ID producto</h4>
