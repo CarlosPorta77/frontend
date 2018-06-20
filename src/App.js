@@ -1,19 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Header from './Header';
+import React, { Component } from 'react'
+import logo from './logo.svg'
+import './App.css'
+import Header from './Header'
+import Footer from './Footer'
 
 import axios from 'axios'
 
 class App extends Component {
-
   render() {
     return (
       <div className="App">
         <Header />
+        <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
