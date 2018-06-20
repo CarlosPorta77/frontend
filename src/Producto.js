@@ -31,7 +31,12 @@ class Producto extends Component {
 
   render() {
     return (
-      <div className="Producto">
+      <div className=".wrapper-producto">
+      <div className="wrapper-titulos">
+        <h4>Nombre:</h4>
+        <h4>ID producto</h4>
+        <h4>Stock</h4>
+      </div>
         {this.state.productos.map(producto => {
           return (
             <ProductoConstruido
