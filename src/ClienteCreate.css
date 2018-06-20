@@ -1,0 +1,39 @@
+.wrapper-create-client {
+  height: 50vh;
+  width: 100vw;
+  padding: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #ecf0f1;
+}
+
+.input-new-client {
+  border-radius: 5px;
+  width: 20em;
+  height: 2em;
+}
+
+.button-save {
+  height: 4em;
+  width: 20em;
+  border-radius: 5pc;
+  background-color: #2c3e50;
+  color: white;
+  margin-top: 3em;
+}
+
+.button-save:hover {
+  cursor: pointer;
+  background-color: #1888f8;
+  color: white;
+}
+
+.new-client-container {
+  width: 35em;
+  height: 7em;
+  margin: auto;
+  padding: 10px;
+  background-color: grey;
+  box-shadow: 5px 10px 18px #888888;
+  padding: 3em;
+}
